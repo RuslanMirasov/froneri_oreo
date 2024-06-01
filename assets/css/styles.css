@@ -22,6 +22,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .oreo-main {
@@ -39,9 +40,6 @@
   background: #074eb6;
   font-weight: normal;
   overflow: hidden;
-}
-.oreo-main * {
-  box-sizing: border-box;
 }
 .oreo-main:before {
   content: "";
