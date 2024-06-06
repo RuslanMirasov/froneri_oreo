@@ -172,51 +172,121 @@ h1 {
   align-content: stretch;
   padding-top: 85px;
   height: 100vh;
-  min-height: 800px;
-  max-height: 860px;
+  min-height: 668px;
   .section-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     height: 100%;
+    z-index: 2;
   }
   @media screen and (max-width: 991px) {
     padding-top: 0px;
     height: calc(100vh - 58px);
   }
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1279px) and (min-width: 1024px) {
     height: auto;
-    max-height: 1024px;
-    min-height: auto;
+  }
+  @media screen and (max-width: 1023px) {
+    height: auto;
+    min-height: 668px;
+    padding-bottom: 40px;
+    align-content: flex-start;
     .section-container {
       align-content: flex-start;
+      height: auto;
     }
   }
 }
 
-.oreo-hero__bg {
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+@keyframes moveUpDownRevers {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+.oreo-hero-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
   position: absolute;
-  z-index: 0;
-  &.oreo-hero__bg--horn {
-    transform: translate(-70%, 5%);
-  }
-  &.oreo-hero__bg--eskimo {
-    transform: translate(70%, 5%);
-  }
-  @media screen and (max-width: 1279px) {
+  width: 98%;
+  top: 100px;
+  bottom: 2%;
+  z-index: 1;
+  margin: 0 auto;
+  .oreo-hero-image {
+    display: block;
+    width: 40%;
+    height: 100%;
     position: relative;
-    &.oreo-hero__bg--horn {
-      width: 375px;
-      max-width: 100%;
-      transform: translate(0%, 0%);
-      margin: 30px 0px 20px 0px;
-      img {
-        width: 100%;
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .animate-image {
+      display: block;
+      position: absolute;
+    }
+    &.left {
+      .animate-image {
+        width: 75px;
+        height: 95px;
+        left: 2%;
+        top: 25%;
+        animation: moveUpDownRevers 1.5s infinite alternate ease-in-out;
       }
     }
-    &.oreo-hero__bg--eskimo {
-      display: none;
+    &.right {
+      .animate-image {
+        width: 106px;
+        height: 96px;
+        left: 26%;
+        top: 0%;
+        animation: moveUpDown 1.5s infinite alternate ease-in-out;
+      }
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    top: 0px;
+    bottom: auto;
+    .oreo-hero-image {
+      width: 80%;
+      margin-left: 10%;
+      max-width: 500px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      &.left {
+        .animate-image {
+          width: 75px;
+          height: 95px;
+          left: -12%;
+          top: 40%;
+          animation: moveUpDownRevers 1.5s infinite alternate ease-in-out;
+        }
+      }
+      &.right {
+        display: none;
+      }
     }
   }
 }
@@ -316,24 +386,13 @@ h1 {
   height: 36px;
   border: none;
   background: none;
+  z-index: 3;
   cursor: pointer;
   img {
     width: 100%;
   }
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1023px) {
     bottom: 20px;
-    position: relative;
-    bottom: auto;
-    left: auto;
-    width: 100%;
-    height: 36px;
-    transform: translate(0%, 0%);
-    margin-top: 40px;
-    img {
-      height: 100%;
-      width: auto;
-      margin: 0 auto;
-    }
   }
 }
 
