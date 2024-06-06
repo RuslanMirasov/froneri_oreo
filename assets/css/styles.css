@@ -478,10 +478,16 @@ h1 {
       -ms-user-select: none;
           user-select: none;
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .production {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1023px) {
   .production {
     width: 100%;
-    max-width: 375px;
+    max-width: 336px;
     margin: 0 auto;
     gap: 30px;
   }
@@ -497,7 +503,7 @@ h1 {
   width: 100%;
   box-sizing: border-box;
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1023px) {
   .production li .production-image img {
     width: 100%;
   }
@@ -509,22 +515,39 @@ h1 {
 }
 .production li:nth-child(1) .choco {
   left: 80%;
-  bottom: 40%;
+  bottom: 32%;
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .production li:nth-child(1) {
+    max-width: 310px;
+  }
+  .production li:nth-child(1) .production-image {
+    max-width: 90%;
+    margin-right: 10%;
+  }
+  .production li:nth-child(1) .production-image img {
+    width: 100%;
+  }
+  .production li:nth-child(1) .choco {
+    width: 80%;
+    left: 70%;
+    bottom: 20%;
+  }
+}
+@media screen and (max-width: 1023px) {
   .production li:nth-child(1) {
     max-width: 100%;
     gap: 20px;
     order: 1;
   }
   .production li:nth-child(1) .production-image {
-    max-width: 204px;
+    max-width: 240px;
     margin-right: auto;
   }
   .production li:nth-child(1) .choco {
     width: 209px;
-    left: 50%;
-    bottom: 10%;
+    left: 54%;
+    bottom: 2%;
   }
 }
 .production li:nth-child(2) {
@@ -541,7 +564,24 @@ h1 {
   top: 4%;
   transform: translate(0%, 0%);
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .production li:nth-child(2) {
+    max-width: 240px;
+    margin-top: 150px;
+  }
+  .production li:nth-child(2) .production-image {
+    min-width: 340px;
+  }
+  .production li:nth-child(2) .production-image img {
+    width: 100%;
+  }
+  .production li:nth-child(2) .choco {
+    width: 200px;
+    left: 65%;
+    top: 10%;
+  }
+}
+@media screen and (max-width: 1023px) {
   .production li:nth-child(2) {
     max-width: 100%;
     order: 3;
@@ -557,7 +597,7 @@ h1 {
     margin-right: auto;
     margin-top: -100px;
     margin-bottom: -40px;
-    transform: translate(-4%, 0%);
+    transform: translate(-4%, -3%);
   }
   .production li:nth-child(2) .choco {
     left: auto;
@@ -565,7 +605,7 @@ h1 {
     top: auto;
     bottom: 0px;
     width: 190px;
-    transform: translate(-8%, -25%);
+    transform: translate(-4%, -6%);
   }
 }
 .production li:nth-child(3) {
@@ -584,7 +624,27 @@ h1 {
   top: 0px;
   transform: translate(-340%, -10%);
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .production li:nth-child(3) {
+    max-width: 194px;
+  }
+  .production li:nth-child(3) .production-image {
+    width: 420px;
+    position: absolute;
+    right: 18%;
+    top: 0%;
+    transform: translate(0%, -60%);
+  }
+  .production li:nth-child(3) .production-image img {
+    width: 100%;
+  }
+  .production li:nth-child(3) .choco {
+    width: 160px;
+    top: 0px;
+    transform: translate(-370%, -2%);
+  }
+}
+@media screen and (max-width: 1023px) {
   .production li:nth-child(3) {
     max-width: 100%;
     order: 2;
@@ -601,13 +661,13 @@ h1 {
     margin-top: -100px;
     right: 0%;
     top: 0%;
-    transform: translate(20px, 0%);
+    transform: translate(20px, -2%);
   }
   .production li:nth-child(3) .choco {
     width: 46%;
     top: auto;
     bottom: 0px;
-    transform: translate(-24%, 12%);
+    transform: translate(-24%, 3%);
   }
 }
 .production li:nth-child(4) {
@@ -623,7 +683,25 @@ h1 {
   position: relative;
   transform: translate(0%, -40%);
 }
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1279px) and (min-width: 1024px) {
+  .production li:nth-child(4) {
+    transform: translate(0%, -8%);
+  }
+  .production li:nth-child(4) .titleBox {
+    max-width: 154px;
+  }
+  .production li:nth-child(4) .production-image {
+    width: 300px;
+  }
+  .production li:nth-child(4) .production-image img {
+    width: 100%;
+  }
+  .production li:nth-child(4) .choco {
+    width: 200px;
+    transform: translate(0%, -40%);
+  }
+}
+@media screen and (max-width: 1023px) {
   .production li:nth-child(4) {
     transform: translate(0%, 0%);
     justify-content: center;
@@ -645,7 +723,7 @@ h1 {
     right: 0px;
     bottom: 0px;
     position: absolute;
-    transform: translate(20%, 0%);
+    transform: translate(10%, 0%);
   }
 }
 
