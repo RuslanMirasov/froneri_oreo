@@ -10,28 +10,29 @@
     <title>Froneri | Oreo</title>
   </head>
   <body>
-    <!-- <header class="header oreoHeader">header</header> -->
+    <header class="header oreoHeader">header</header>
     <main class="oreo-main">
       <!-- Section Hero -->
       <section class="section oreo-hero">
+        <div class="oreo-hero-images">
+          <div class="oreo-hero-image left">
+            <div class="animate-image"><img src="./assets/img/left_animate_image.png" alt="Oreo" /></div>
+            <img src="./assets/img/hero_left.png" alt="Oreo" />
+          </div>
+          <div class="oreo-hero-image right">
+            <div class="animate-image"><img src="./assets/img/right_animate_image.png" alt="Oreo" /></div>
+            <img src="./assets/img/hero_right.png" alt="Oreo" />
+          </div>
+        </div>
         <div class="section-container">
-          <picture class="oreo-hero__bg oreo-hero__bg--horn">
-            <source srcset="./assets/img/left_horn_mobil.png" media="(max-width: 1279px)" />
-            <img src="./assets/img/left_horn.png" alt="Oreo horn" />
-          </picture>
-          <img
-            src="./assets/img/right_eskimo.png"
-            alt="Oreo eskimo"
-            class="oreo-hero__bg oreo-hero__bg--eskimo"
-          />
           <div class="oreo-hero__content">
             <h1 class="oreo-title-h1">Весёлый мир <span>мороженого</span></h1>
             <img src="./assets/img/logo.svg" alt="Oreo logo" class="oreo-logo" />
           </div>
-          <button type="button" class="oreo-hero-button" data-scrollto="oreo-about">
-            <img src="./assets/img/arrow_down.gif" alt="Oreo" />
-          </button>
         </div>
+        <button type="button" class="oreo-hero-button" data-scrollto="oreo-about">
+          <img src="./assets/img/arrow_down.gif" alt="Oreo" />
+        </button>
       </section>
 
       <!-- Section About -->
@@ -96,6 +97,11 @@
         </div>
       </section>
     </main>
+    <footer class="custom-footer">
+      <a href="#">
+        <img src="./assets//img/froneri_logo.svg" alt="froneri" />
+      </a>
+    </footer>
     <script src="./assets/js/scripts.js" type="module"></script>
   </body>
 </html>
