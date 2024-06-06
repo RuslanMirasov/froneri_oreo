@@ -784,3 +784,22 @@ img.oreo-footer__image {
     text-align: center;
   }
 }
+
+.custom-footer {
+  position: relative;
+  background: #ffffff;
+  padding: 18px 30px 16px 30px;
+  z-index: 5;
+}
+.custom-footer a {
+  display: inline-block;
+}
+.custom-footer img {
+  width: 142px;
+  height: auto;
+}
+@media screen and (max-width: 612px) {
+  .custom-footer {
+    text-align: center;
+  }
+}
