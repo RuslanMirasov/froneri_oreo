@@ -400,7 +400,13 @@ h1 {
 
 .oreo-about {
   padding: 100px 0px 0px 0px;
-  @media screen and (max-width: 1279px) {
+  @media screen and (max-width: 1279px) and (min-width: 1024px) {
+    padding: 60px 0px 0px 0px;
+    .section-container {
+      max-width: 1024px;
+    }
+  }
+  @media screen and (max-width: 1023px) {
     padding: 60px 0px;
   }
 }
