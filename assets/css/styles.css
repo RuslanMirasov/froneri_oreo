@@ -166,7 +166,7 @@ h1 {
   align-content: stretch;
   padding-top: 85px;
   height: 100vh;
-  min-height: 668px;
+  min-height: 500px;
 }
 .oreo-hero .section-container {
   display: flex;
